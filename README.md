@@ -75,3 +75,7 @@ Or using command line with the ``rcc run`` command:
 
 The browser that is used is controlled by ``TEST_BROWSER`` environment variable defined in
 `test.resource` resource file. Firefox browser is used by default.
+
+## Further reading
+
+- [Implementing and testing the robot](https://robocorp.com/docs/courses/software-robot-delivery-process/implementing-and-testing-the-robot)
