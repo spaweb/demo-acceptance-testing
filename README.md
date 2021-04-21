@@ -16,13 +16,13 @@ Test case files as well as a resource file used by them are located in
 the ``tests`` directory. Click file names below to see the latest versions
 online.
 
-`valid_login.robot`:
+[valid_login.robot](tests/valid_login.robot):
     A test suite with a single test for valid login.
 
     This test has a workflow that is created using keywords in
     the imported resource file.
 
-`invalid_login.robot`
+[invalid_login.robot](tests/invalid_login.robot):
     A test suite containing tests related to invalid login.
 
     These tests are data-driven by their nature. They use a single
@@ -32,14 +32,14 @@ online.
     This suite also demonstrates using setups and teardowns in
     different levels.
 
-`resource.robot`
+[test.resources](tests/test.resource):
     A resource file with reusable keywords and variables.
 
     The system specific keywords created here form our own
     domain specific language. They utilize keywords provided
-    by the imported SeleniumLibrary_.
+    by the imported [RPA.Browser.Selenium](https://robocorp.com/docs/libraries/rpa-framework/rpa-browser-selenium).
 
-See `Robot Framework User Guide` for more details about the test data syntax.
+See [Robot Framework cheat sheet](https://robocorp.com/docs/languages-and-frameworks/robot-framework/cheat-sheet) for more details about the test data syntax.
 
 ## Running demo
 
@@ -63,18 +63,15 @@ executed from the command line, using ``Ctrl-C`` is enough.
 
 ## Running tests
 
-The `test cases` are located in the ``tests`` directory. They can be
+The [test cases](#test-cases) are located in the ``tests`` directory. They can be
 executed with `Run Robot` command in Robocorp Lab or Visual Studio Code.
 
 Or using command line with the ``rcc run`` command:
 
-    rcc run
+    rcc run -t "Run Test With Firefox"
+    rcc run -t "Run Test With Chrome"
 
 ### Using different browsers
 
-The browser that is used is controlled by ``${BROWSER}`` variable defined in
-`resource.robot` resource file. Firefox browser is used by default, but that
-can be easily overridden from the command line::
-
-    robot --variable BROWSER:Chrome login_tests
-    robot --variable BROWSER:IE login_tests
+The browser that is used is controlled by ``TEST_BROWSER`` environment variable defined in
+`test.resource` resource file. Firefox browser is used by default.
