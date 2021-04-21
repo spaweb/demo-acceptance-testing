@@ -53,7 +53,7 @@ command line::
     python demoapp/server.py
 
 After the demo application is started, it is be available in URL
-`http://localhost:7272`. You can test it manually, valid credentials are
+http://localhost:7272. You can test it manually, valid credentials are
 ``demo/mode``, and it needs to be running while executing the automated
 tests.
 
@@ -68,8 +68,8 @@ executed with `Run Robot` command in Robocorp Lab or Visual Studio Code.
 
 Or using command line with the ``rcc run`` command:
 
-    rcc run -t "Run Test With Firefox"
-    rcc run -t "Run Test With Chrome"
+    rcc run -t "Run Tests With Firefox"
+    rcc run -t "Run Tests With Chrome"
 
 ### Using different browsers
 
