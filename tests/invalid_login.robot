@@ -4,7 +4,7 @@ Suite Setup       Test Setup Actions
 Suite Teardown    Close Browser
 Test Setup        Go To Login Page
 Test Template     Login With Invalid Credentials Should Fail
-Resource          resource.robot
+Resource          test.resource
 
 *** Test Cases ***               USER NAME        PASSWORD
 Invalid Username                 invalid          ${VALID PASSWORD}

@@ -32,7 +32,7 @@ online.
     This suite also demonstrates using setups and teardowns in
     different levels.
 
-[test.resources](tests/test.resource):
+[test.resource](tests/test.resource):
     A resource file with reusable keywords and variables.
 
     The system specific keywords created here form our own
