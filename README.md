@@ -61,15 +61,28 @@ If the application was started by double-clicking ``demoapp/server.py``
 file, it can be shut down by closing the opened window. If it was
 executed from the command line, using ``Ctrl-C`` is enough.
 
-## Running tests
+## Running tests in development
 
 The [test cases](#test-cases) are located in the ``tests`` directory. They can be
 executed with `Run Robot` command in Robocorp Lab or Visual Studio Code.
 
+<img src="images/runrobot.png" style="margin-bottom:20px">
+<img src="images/report.png" style="margin-bottom:20px">
+
 Or using command line with the ``rcc run`` command:
 
-    rcc run -t "Run Tests With Firefox"
-    rcc run -t "Run Tests With Chrome"
+    rcc run -t "Run Tests"
+
+## Running tests in release testing
+
+Test are typically deployed from development environment to Robocorp Control Room 
+with version control system (e.g. Github). 
+
+Robocorp Control Room can deliver notifications of PASSed and FAILed tests e.g.
+to email or Slack. Test runs can execute without any infrastructure using Control 
+Room containers or with dedicated desktop environments.
+
+<img src="images/controlroom.png" style="margin-bottom:20px">
 
 ### Using different browsers
 

@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation     A resource file with reusable keywords and variables.
 Library           OperatingSystem
+Library           Process
 Library           RPA.Browser.Selenium
 
 *** Variables ***
@@ -15,12 +16,19 @@ ${ERROR URL}      http://${SERVER}/error.html
 
 *** Keywords ***
 Test Setup Actions
+    Start Process  python  demoapp/server.py
     Log Variables
     Log Environment Variables
     Open Browser To Login Page
 
+*** Keywords ***
+Test Teardown Actions
+    Close Browser
+    Terminate All Processes
+
 Open Browser To Login Page
-    Open Browser    ${LOGIN URL}    ${BROWSER}
+    Run Keyword Unless    $BROWSER=='Any'    Open Browser    ${LOGIN URL}    ${BROWSER}
+    Run Keyword If    $BROWSER=='Any'    Open Available Browser    ${LOGIN URL}
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
     Login Page Should Be Open

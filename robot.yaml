@@ -1,6 +1,8 @@
 tasks:
+  Run Tests:
+    shell: python -m robot -v BROWSER:Any --report NONE --outputdir output --logtitle "Acceptance Test Results" -L TRACE tests
   Run Tests With Firefox:
-    shell: python -m robot --report NONE --outputdir output --logtitle "Acceptance Test Results" -L TRACE tests
+    shell: python -m robot -v BROWSER:Firefox --report NONE --outputdir output --logtitle "Acceptance Test Results" -L TRACE tests
   Run Tests With Chrome:
     shell: python -m robot -v BROWSER:Chrome --report NONE --outputdir output --logtitle "Acceptance Test Results" -L TRACE tests
 

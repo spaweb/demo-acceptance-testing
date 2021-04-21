@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     A test suite containing tests related to invalid login.
 Suite Setup       Test Setup Actions
-Suite Teardown    Close Browser
+Suite Teardown    Test Teardown Actions
 Test Setup        Go To Login Page
 Test Template     Login With Invalid Credentials Should Fail
 Resource          test.resource
