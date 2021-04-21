@@ -1,0 +1,12 @@
+tasks:
+  command:
+    shell: python -m robot --report NONE --outputdir output --logtitle "Acceptance Test Results" -L TRACE tests
+
+condaConfigFile: conda.yaml
+artifactsDir: output
+PATH:
+  - .
+PYTHONPATH:
+  - .
+ignoreFiles:
+  - .gitignore
