@@ -5,7 +5,7 @@
 The demo application is a very simple login page shown below. With
 user name ``demo`` and password ``mode`` you get into a welcome page, and
 otherwise you end up to an error page. How to start and stop the
-application yourself is explained in the [Starting demo application][#Starting demo application]
+application yourself is explained in the [Starting demo application](#Starting demo application)
 section.
 
 <img src="images/demoapp.png" style="margin-bottom:20px">
@@ -39,7 +39,7 @@ online.
     domain specific language. They utilize keywords provided
     by the imported SeleniumLibrary_.
 
-See `Robot Framework User Guide`_ for more details about the test data syntax.
+See `Robot Framework User Guide` for more details about the test data syntax.
 
 ## Running demo
 
