@@ -7,7 +7,7 @@ Resource          resource.robot
 
 *** Test Cases ***
 Valid Login
-    Open Browser To Login Page
+    Test Setup Actions
     Input Username    demo
     Input Password    mode
     Submit Credentials

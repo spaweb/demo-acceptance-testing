@@ -1,10 +1,11 @@
 *** Settings ***
 Documentation     A resource file with reusable keywords and variables.
+Library           OperatingSystem
 Library           RPA.Browser.Selenium
 
 *** Variables ***
 ${SERVER}         localhost:7272
-${BROWSER}        Firefox
+${BROWSER}        %{TEST_BROWSER=Firefox}
 ${DELAY}          0
 ${VALID USER}     demo
 ${VALID PASSWORD}    mode
@@ -13,6 +14,11 @@ ${WELCOME URL}    http://${SERVER}/welcome.html
 ${ERROR URL}      http://${SERVER}/error.html
 
 *** Keywords ***
+Test Setup Actions
+    Log Variables
+    Log Environment Variables
+    Open Browser To Login Page
+
 Open Browser To Login Page
     Open Browser    ${LOGIN URL}    ${BROWSER}
     Maximize Browser Window
