@@ -5,7 +5,7 @@
 The demo application is a very simple login page shown below. With
 user name ``demo`` and password ``mode`` you get into a welcome page, and
 otherwise you end up to an error page. How to start and stop the
-application yourself is explained in the [Starting demo application](#Starting demo application)
+application yourself is explained in the [Starting demo application](#starting-demo-application)
 section.
 
 <img src="images/demoapp.png" style="margin-bottom:20px">
