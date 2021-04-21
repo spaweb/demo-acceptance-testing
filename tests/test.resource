@@ -27,8 +27,11 @@ Test Teardown Actions
     Terminate All Processes
 
 Open Browser To Login Page
-    Run Keyword Unless    $BROWSER=='Any'    Open Browser    ${LOGIN URL}    ${BROWSER}
-    Run Keyword If    $BROWSER=='Any'    Open Available Browser    ${LOGIN URL}
+    IF  $BROWSER=='Any'
+        Open Available Browser    ${LOGIN URL}
+    ELSE
+        Open Browser    ${LOGIN URL}    ${BROWSER}
+    END
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
     Login Page Should Be Open
