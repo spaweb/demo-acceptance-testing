@@ -36,8 +36,13 @@ online.
     A resource file with reusable keywords and variables.
 
     The system specific keywords created here form our own
-    domain specific language. They utilize keywords provided
-    by the imported [RPA.Browser.Selenium](https://robocorp.com/docs/libraries/rpa-framework/rpa-browser-selenium).
+    domain specific language. 
+
+Keywords are implemented using libraries:  
+
+- [RPA.Browser.Selenium](https://robocorp.com/docs/libraries/rpa-framework/rpa-browser-selenium)
+- [OperatingSystem](https://robocorp.com/docs/libraries/built-in/operatingsystem)
+- [Process](https://robocorp.com/docs/libraries/built-in/process)
 
 See [Robot Framework cheat sheet](https://robocorp.com/docs/languages-and-frameworks/robot-framework/cheat-sheet) for more details about the test data syntax.
 
